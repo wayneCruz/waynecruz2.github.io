@@ -9,13 +9,11 @@
     window.onload = function() {
         AFRAME.registerComponent('event-listener', {
             init: function () {
-                this.audio = document.querySelector("#roar");
 
                 this.el.addEventListener('click', function (e) {
 		
                     let dragon = document.querySelector('#dragon-model')
 		    dragon.setAttribute('animation-mixer', "clip: Scene; loop: once;");
-                    this.audio.play();
 			
                   console.log(e)
                 }.bind(this));
@@ -66,12 +64,11 @@
       </a-assets>
       <a-entity event-listener id="dragon-model"  
         gltf-model="#dragon" 
-        scale=".25 .25 .25" 
+        scale=".5 .5 .5" 
         position = "0 0 -5" 
         rotation="0 0 0" 
       >
       </a-entity>
-      <a-sound src="#roar" autoplay="false"></a-sound>
       <a-entity cursor="rayOrigin:mouse"></a-entity>
       <a-entity cursor="fuse: true; fuseTimeout: 500"></a-entity>
     </a-scene>
