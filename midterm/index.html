@@ -14,7 +14,7 @@
                 this.el.addEventListener('click', function (e) {
 		
                     let dragon = document.querySelector('#dragon-model')
-		    dragon.setAttribute('animation-mixer', "clip: mixamo.com; loop: once;");
+		    dragon.setAttribute('animation-mixer', "clip: *; loop: once;");
                     this.audio.play();
 			
                   console.log(e)
@@ -37,7 +37,7 @@
                 this.el.addEventListener('touchstart', function (e) {
 		
                     let dragon = document.querySelector('#dragon-model')
-		    dragon.setAttribute('animation-mixer', "clip: mixamo.com; loop: once;");
+		    dragon.setAttribute('animation-mixer', "clip: *; loop: once;");
                     this.audio.play();
 			console.log(e)
                 }.bind(this));
